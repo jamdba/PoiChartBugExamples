@@ -1,0 +1,4 @@
+Testing with BugtestTemplateOneSheet works as slide2.xml.rels has an entry for the target chart data as "../embeddings/Microsoft_Excel_Worksheet.xlsx"
+The new chart saves as it's target as "../embeddings/Microsoft_Excel_Worksheet1.xlsx"
+
+Testing with BugtestTemplateOneSheet fails as slide2.xml.rels has an entry for the target chart data as "../embeddings/Microsoft_Excel_Worksheet.xlsx" and slide3.xml.rels has an entry for the target chart data as "../embeddings/Microsoft_Excel_Worksheet1.xlsx". The new chart attempts to save it's target as "../embeddings/Microsoft_Excel_Worksheet1.xlsx" and fails.

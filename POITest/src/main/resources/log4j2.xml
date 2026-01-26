@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration >
+  <Appenders>
+      <Console name="Console" target="SYSTEM_OUT">
+         <PatternLayout pattern="%d{DEFAULT} %c{6} %-5level - %msg%n"/>
+      </Console>
+	  <File name="TestLog" fileName="test.log" append = "false"> 
+          <PatternLayout pattern="%d{DEFAULT} %c{6} %-5level - %msg%n"/>
+      </File>	        
+  </Appenders>
+  <Loggers>
+	  <logger name="com.horizonbtc.test" level="INFO" additivity="false">
+		   <appender-ref ref="Console" />
+	  </logger>
+	  <logger name="com.horizonbtc.test" level="INFO" additivity="false">
+		   <appender-ref ref="TestLog" />
+	  </logger>	  
+      <root level="ERROR">          
+		   <appender-ref ref="Console" />
+	  </root>
+  </Loggers>
+</Configuration>
